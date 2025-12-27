@@ -1,0 +1,25 @@
+﻿@page
+@model DZ4.Pages.AuthorizationFormModel
+@{
+}
+
+<h1 class="text-center mb-3">Авторизация пользователя</h1>
+<hr/>
+
+<div style="max-width:400px; margin: 0 auto;">
+    <form method="post">
+        <div class="mb-2">
+            <label class="form-label" asp-for="UserName"></label>
+            <input class="form-control" asp-for="UserName" />
+            <span class="text-danger" asp-validation-for="UserName"></span>
+        </div>
+        <div class="mb-2">
+            <label class="form-label" asp-for="Password"></label>
+            <input class="form-control" asp-for="Password" type="password" />
+            <span class="text-danger" asp-validation-for="Password"></span>
+        </div>
+        <div class="mb-2">
+            <button class="btn btn-success" type="submit">Авторизация</button>
+        </div>
+    </form>
+</div>
